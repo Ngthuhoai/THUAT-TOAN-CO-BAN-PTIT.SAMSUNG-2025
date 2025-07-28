@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int n;cin>>n;
+   int a[n];
+   for(int &i:a) cin>>i;
+   for(int i=0;i<n-1;i++){
+   		int x=a[i],pos=i;
+   		for(int j=i+1;j<n;j++){
+   			if(x>a[j]){
+   				x=a[j];
+   				pos=j;
+			}
+		}
+		swap(a[i],a[pos]);
+		cout<<"Buoc "<<i+1<<": ";
+		for(int u: a) cout<<u<<" ";
+		cout<<endl;
+   }
+}
